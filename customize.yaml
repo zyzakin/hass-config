@@ -1,0 +1,12 @@
+
+
+switch.bedroom_switch:
+  friendly_name: "sypial"
+switch.mqtt_switch_3:
+  friendly_name: "testowy"
+light.aqua_light:
+  friendly_name: "Światło w akwarium"
+  #entity_picture: local/flashlight.png
+light.aqua_pump:
+  friendly_name: "Pompa w akwarium"
+

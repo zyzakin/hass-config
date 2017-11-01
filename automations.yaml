@@ -1,0 +1,35 @@
+###### Akwarium #############
+- alias: Karmienie rybek
+  trigger:
+    platform: state
+    entity_id: light.aqua_pump
+    to: 'off'
+    for:
+      minutes: 10
+  condition:
+    condition: state
+    entity_id: light.aqua_light
+    state: 'on'
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.aqua_pump
+
+- alias: "Wyłaczenie światła w akwarium"
+  trigger:
+    platform: time
+    at: "21:59:00"
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.aqua_light
+
+- alias: "Włączenie światła w akwarium"
+  trigger:
+    platform: time
+    at: "07:30:00"
+  action:
+    - service: homeassistant.turn_on
+      entity_id: light.aqua_light
+    - service: homeassistant.turn_on
+      entity_id: light.aqua_pump
+
+        ##############

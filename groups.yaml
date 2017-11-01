@@ -1,0 +1,31 @@
+
+OneWire:
+    view: yes
+    name: OneWire
+    entities:
+        - sensor.podworze
+        - sensor.dzieciecy
+        - sensor.hydrofor
+        - sensor.podoga
+        - sensor.gz
+        - sensor.gp
+        - sensor.dz
+        - sensor.dp
+
+system:
+    view: yes
+    name: OS
+    entities:
+        - sensor.disk_use_home
+        - sensor.average_load_1m
+        - sensor.average_load_5m
+        - sensor.average_load_15m
+        - sensor.last_boot
+        - sensor.ram_free
+        - sensor.cpu_use
+
+wheather:
+    - sensor.yr_symbol
+    - sun.sun
+    - sensor.podworze
+
